@@ -1,0 +1,24 @@
+{
+  "name": "friendlychat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serve.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "concurrent": "^0.3.2",
+    "concurrently": "^1.0.0",
+    "livereload": "^0.4.1"
+  },
+  "scripts": {
+    "start": "concurrent \"livereload site\" \"node serve.js\"",
+    "ghp-deploy": "git subtree push --prefix=site origin gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.atcloud.io:AutoTrader/mcr-digital-experience-day.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

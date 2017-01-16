@@ -1,0 +1,1 @@
+## Wrapped/Mashed version the Firebase 'Friendly Chat' code.  A likely candidate for inclusion in mcr-digital-experience-day, replacing the current firebase impl
