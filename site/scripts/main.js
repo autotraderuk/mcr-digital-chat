@@ -18,9 +18,7 @@
 // Initializes FriendlyChat.
 function FriendlyChat() {
   this.checkSetup();
-
   this.initFirebase();
-
   window.friendlyChat = this;
 }
 
@@ -85,7 +83,9 @@ FriendlyChat.prototype.loadMessages = function() {
 
 // Saves a new message on the Firebase DB.
 FriendlyChat.prototype.saveMessage = function(e) {
-  e.preventDefault();
+  if(e){
+    e.preventDefault();
+  }
   // Check that the user entered a message and is signed in.
   if (this.messageInput.value && this.checkSignedInWithMessage()) {
     var currentUser = this.auth.currentUser;
@@ -181,6 +181,8 @@ FriendlyChat.prototype.signOut = function() {
 
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
 FriendlyChat.prototype.onAuthStateChanged = function(user) {
+  console.log("onAuthStateChanged has user ?")
+  console.log(user)
   if (user) { // User is signed in!
     // Get profile pic and user's name from the Firebase user object.
     var profilePicUrl = user.photoURL;
@@ -250,7 +252,10 @@ FriendlyChat.prototype.checkSignedInWithMessage = function() {
 // Resets the given MaterialTextField.
 FriendlyChat.resetMaterialTextfield = function(element) {
   element.value = '';
-  element.parentNode.MaterialTextfield.boundUpdateClassesHandler();
+
+  if(element.parentNode.MaterialTextfield){
+    element.parentNode.MaterialTextfield.boundUpdateClassesHandler();
+  }
 };
 
 // Template for messages.

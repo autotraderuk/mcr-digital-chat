@@ -16,17 +16,45 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+<!--Step - End -->
+
+<!--Step - Start -->
+<div class="messaging">
+  <input type="textfield" id="message"></input>
+  <button id="send">send</button>
+</div>
+
+<!--Step - Start -->
+<div class="signinout">
+  <button id="signin">Sign in</button>
+  <button id="signout">Sign out</button>
+</div>
+<!--Step - End -->
+
+<!--Step - Start -->
+<div id="messages">
+  <ul>
+  </ul>
+</div>
+<!--Step - End -->
 
 
+<!--Step - Start -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<!--Step - End -->
 
+<!--Step - Start -->
+<script>
+  $("#send").on("click", function(e) { alert($("#message").val()); });
+  //Next step
+  $("#send").on("click", function(e) {
+    $("#messages ul").append("<li>" + $("#message").val() + "</li>");
+    $("#message").val("");
+  });
+</script>
+<!--Step - End -->
 
-
-
-
-
-
-
-
+<!--Step - Start -->
 <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -40,11 +68,29 @@
   firebase.initializeApp(config);
 </script>
 <script src="scripts/main.js"></script>
+<script src="scripts/simplechat.js"></script>
+
+
+<!--Step - Start -->
 <script>
-  //Init friendlyChat
-  var friendlyChat = new FriendlyChat();
+  //Init friendlyChat - another step - maybe extact this into another script
+  var chat = new Chat();
+  chat.setMessageInput($("#message").get(0));
+  chat.setSubmitButton($("#send").get(0));
+  chat.setSignInButton($("#signin").get(0))
+  chat.setSignOutButton($("#signout").get(0))
+
+  //Another steps?
+  $("#send").on("click", function(){chat.sendMessage()});
+  $("#signin").on("click", function(){chat.signIn()});
+  $("#signout").on("click", function(){chat.signOut()});
+
+  chat.setMessageList($("#messages").get(0))
+
+
 
 </script>
+<!--Step - Start -->
 
 </body>
 </html>
