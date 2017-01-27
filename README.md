@@ -1,3 +1,11 @@
+TODO - Finalise setup instruction:
+1. Npm install in base dir
+2. The run 'npm start’
+- Simple chat (the one they will build) is: http://localhost:8081/simplechat.html 
+- Complete is: http://localhost:8081/complete.html
+- Index.html is currently empty but maybe could do with a header saying add your code here
+
+
 Javascripty section
 ---
 
