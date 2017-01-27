@@ -43,6 +43,9 @@ FriendlyChat.prototype.initChatWithDefaultBindings = function() {
   this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
 
+  //Toggle to make the demo better
+  this.shouldLoadMessages = true;
+
   // Toggle for the button.
   var buttonTogglingHandler = this.toggleButton.bind(this);
   this.messageInput.addEventListener('keyup', buttonTogglingHandler);
@@ -77,8 +80,11 @@ FriendlyChat.prototype.loadMessages = function() {
     var val = data.val();
     this.displayMessage(data.key, val.name, val.text, val.photoUrl, val.imageUrl);
   }.bind(this);
-  this.messagesRef.limitToLast(12).on('child_added', setMessage);
-  this.messagesRef.limitToLast(12).on('child_changed', setMessage);
+
+  if(this.shouldLoadMessages){
+    this.messagesRef.limitToLast(20).on('child_added', setMessage);
+    this.messagesRef.limitToLast(20).on('child_changed', setMessage);
+  }
 };
 
 // Saves a new message on the Firebase DB.

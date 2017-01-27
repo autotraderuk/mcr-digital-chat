@@ -3,7 +3,8 @@ var friendlyChat;
 
 function Chat() {
     friendlyChat = new FriendlyChat();
-
+    //Make sure that without calling listenForMessages we do not display any of the messages
+    friendlyChat.shouldLoadMessages = false;
     //Stop button toggle
     friendlyChat.toggleButton = function(){};
 }
@@ -36,10 +37,14 @@ Chat.prototype.setSignOutButton = function(element){
   friendlyChat.signOutButton = element;
 }
 
-Chat.prototype.signIn = function(element){
+Chat.prototype.signIn = function(){
   friendlyChat.signIn();
 }
 
-Chat.prototype.signOut = function(element){
+Chat.prototype.signOut = function(){
   friendlyChat.signOut();
+}
+
+Chat.prototype.listenForMessages = function(){
+  friendlyChat.shouldLoadMessages = true;
 }
