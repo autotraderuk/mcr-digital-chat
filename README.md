@@ -86,34 +86,6 @@ Database javascrity section
 ---
 This section is an extension on the above and will introduce how databases play a large part in applications.  
 
-
-* Add the following scripts to your page to allow us to continue. 
-
-```html
-<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAmZDCY6OaDM749VGyCBZBIg6qVtnvMuOM",
-    authDomain: "mcrdigapprday.firebaseapp.com",
-    databaseURL: "https://mcrdigapprday.firebaseio.com",
-    storageBucket: "mcrdigapprday.appspot.com",
-    messagingSenderId: "252018298878"
-  };
-  firebase.initializeApp(config);
-</script>
-<script src="scripts/main.js"></script>
-<script src="scripts/simplechat.js"></script>
-<script>
-  //Init friendlyChat - another step - maybe extact this into another script
-  var chat = new Chat();
-  chat.setMessageInput($("#message").get(0));
-  chat.setSubmitButton($("#send").get(0));
-  chat.setSignInButton($("#signin").get(0))
-  chat.setSignOutButton($("#signout").get(0))
-</script>
-```
-
 * Now lets add another input box and button that will allow us to create a more useful comments system. 
 
 ```html
@@ -123,19 +95,6 @@ This section is an extension on the above and will introduce how databases play 
 </div>
 
 ```
-
-  As you can see we have decided to call the new input message to allow it to be easily distinguish from the simple-comments solution
-
-* Lets now also add a messages box that will allow us to collect messages
-
-```html
-<div id="messages">
-  <ul>
-  </ul>
-</div>
-
-```
-
 * Our new solution will also need a sign in and sign out button.
 
 ```html
@@ -144,12 +103,40 @@ This section is an extension on the above and will introduce how databases play 
   <button id="signout">Sign out</button>
 </div>
 ```
+
+  As you can see we have decided to call the new input message to allow it to be easily distinguish from the simple-comments solution
+
+* Lets now also add a messages box that will allow us to collect messages
+
+```html
+<div id="messages">
+  
+</div>
+
+```
+
+* Add the following scripts to your page to allow us to continue. 
+
+```html
+<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/simplechat.js"></script>
+<script>
+  var chat = new Chat();
+ 
+  chat.setMessageInput($("#message"));
+  chat.setSubmitButton($("#send"));
+  chat.setSignInButton($("#signin"));
+  chat.setSignOutButton($("#signout"));
+  chat.setMessageList($("#messages"));
+</script>
+```
+
 * Now lets attach some click handlers like before.  This will allow the javascript too react when a button is clicked and 
 call the functionality that has been built for you already.
 
 ```html
 <script>
-  //Another steps?
   $("#send").on("click", function(){chat.sendMessage()});
   $("#signin").on("click", function(){chat.signIn()});
   $("#signout").on("click", function(){chat.signOut()});

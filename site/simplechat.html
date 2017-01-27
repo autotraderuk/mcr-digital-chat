@@ -16,9 +16,41 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-<!--Step - End -->
 
-<!--Step - Start -->
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<button id="learn-more" class="btn btn-success btn-lg" type="button">Learn More</button>
+
+
+
+<script>
+
+    $('#learn-more').click( function() {
+        alert( 'Learn more about what?');
+    });
+
+</script>
+
+<div>
+  <input type="textfield" id="simple-comment"></input>
+  <button id="simple-send">send simple comment</button>
+</div>
+
+<div class="col-md-8 col-md-offset-2">
+  <h2>Simple Comments</h2>
+  <div id="simple-comments">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<script>
+    $("#simple-send").on("click", function(e) {
+        $("#simple-comments ul").append("<li>" + $("#simple-comment").val() + "</li>");
+        $("#simple-comment").val("");
+    });
+</script>
+
 <div class="messaging">
   <input type="textfield" id="message"></input>
   <button id="send">send</button>
@@ -29,69 +61,33 @@
   <button id="signin">Sign in</button>
   <button id="signout">Sign out</button>
 </div>
-<!--Step - End -->
 
-<!--Step - Start -->
 <div id="messages">
-  <ul>
-  </ul>
+
 </div>
-<!--Step - End -->
 
-
-<!--Step - Start -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-<!--Step - End -->
-
-<!--Step - Start -->
-<script>
-  $("#send").on("click", function(e) { alert($("#message").val()); });
-  //Next step
-  $("#send").on("click", function(e) {
-    $("#messages ul").append("<li>" + $("#message").val() + "</li>");
-    $("#message").val("");
-  });
-</script>
-<!--Step - End -->
-
-<!--Step - Start -->
 <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAmZDCY6OaDM749VGyCBZBIg6qVtnvMuOM",
-    authDomain: "mcrdigapprday.firebaseapp.com",
-    databaseURL: "https://mcrdigapprday.firebaseio.com",
-    storageBucket: "mcrdigapprday.appspot.com",
-    messagingSenderId: "252018298878"
-  };
-  firebase.initializeApp(config);
-</script>
 <script src="scripts/main.js"></script>
 <script src="scripts/simplechat.js"></script>
-
-
-<!--Step - Start -->
 <script>
-  //Init friendlyChat - another step - maybe extact this into another script
-  var chat = new Chat();
-  chat.setMessageInput($("#message").get(0));
-  chat.setSubmitButton($("#send").get(0));
-  chat.setSignInButton($("#signin").get(0))
-  chat.setSignOutButton($("#signout").get(0))
+    var chat = new Chat();
 
-  //Another steps?
-  $("#send").on("click", function(){chat.sendMessage()});
-  $("#signin").on("click", function(){chat.signIn()});
-  $("#signout").on("click", function(){chat.signOut()});
-
-  chat.setMessageList($("#messages").get(0))
+    chat.setMessageInput($("#message"));
+    chat.setSubmitButton($("#send"));
+    chat.setSignInButton($("#signin"));
+    chat.setSignOutButton($("#signout"));
+    chat.setMessageList($("#messages"));
 </script>
-<!--Step - Start -->
 
 <script>
-    //final step -- supprise
-    chat.listenForMessages()
+    //Another steps?
+    $("#send").on("click", function(){chat.sendMessage()});
+    $("#signin").on("click", function(){chat.signIn()});
+    $("#signout").on("click", function(){chat.signOut()});
+</script>
+
+<script>
+    chat.listenForMessages();
 </script>
 
 
