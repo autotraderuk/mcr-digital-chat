@@ -212,15 +212,22 @@ We need some way of storing all the comments that have been entered. Thats where
 
 Let's make our pages a bit more interesting. There are loads of different Iframes that we can add to the page to pull content down from other sites.
 This could be from :
-* youtube   
-   ```html
-   <iframe width="688" height="390"src="https://www.youtube.com/embed/g3FOQjCgl9w?controls=1"></iframe>
-   ```
-* sound cloud
-   ```html
-   <iframe width="100%" height="450" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/298167372"></iframe>
-   ```
-* instagram see [here](https://snapwidget.com/)
+ **youtube**
+ 
+ ```html
+ <iframe width="688" height="390"src="https://www.youtube.com/embed/g3FOQjCgl9w?controls=1"></iframe>
+ ```
+ 
+** sound cloud**
+ ```html
+ <iframe width="100%" height="450" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/298167372"></iframe>
+ ```
+ 
+** instagram** see [here](https://snapwidget.com/)
+
+
+
+But what about the structure of the page. Navigate to /css-html.html to get some styling tips
 
 
 
