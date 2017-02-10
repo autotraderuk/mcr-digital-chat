@@ -1,9 +1,3 @@
-TODO - Finalise setup instruction:
-1. Npm install in base dir
-2. The run 'npm start’
-- Simple chat (the one they will build) is: http://localhost:8081/simplechat.html 
-- Complete is: http://localhost:8081/complete.html
-- Index.html is currently empty but maybe could do with a header saying add your code here
 
 # Setup
 
@@ -83,25 +77,20 @@ And finally run it
 This first session is aimed at getting you going, we will put a few elements on the page and have a look at the pages structure. 
 
 
-This page acts as the base of our application and is the page we hit when we naviagte to the root of the project : http://localhost:8082/
-
 
 
 The three main building blocks to a web page are [html](http://www.w3schools.com/html/),  [css](http://www.w3schools.com/css/) and [JavaScript](http://www.w3schools.com/js/). We'll start by looking at these. 
 
-Let's add a button that changes the title to say hello to you.
+We will be coding within the index.html page in the application. This page acts as the base of our application and is the page we hit when we naviagte to the root of the project : http://localhost:8082/
+
+Let's add a button that changes the title to say hello to you!
+First the html button
 
 ```html
-<button id="learn-more" class="btn btn-success btn-lg" type="button">Learn More</button>
+<button id="change-name" onclick="myFunction()">Try it</button>
 ```
 
-And an input box for you to put your name in
-
-
-```html
-<input id="hello-me" class="btn btn-success btn-lg" type="button">Me</button>
-```
-Now we need a JavaScript function that will take the value you enter and manipulate the DOM putting your name in the title.
+And now a JavaScript function that triggers a prompt for you to enter your name into.
 
 ```html
 <script>
@@ -117,10 +106,15 @@ Now we need a JavaScript function that will take the value you enter and manipul
 
 ```
 
+This JavaScript function manipulates the DOM putting your name into the title element.
+
 Look at this function and make sure you get what it is doing. 
 
 Now lets add in some css. Pick a colour from the [colour picker](http://www.w3schools.com/html/) can you modify the above function to change the colour of your name to an inputted colour? 
+
 Hint: The code is below if you're struggling.
+
+
 
 
 
@@ -143,7 +137,9 @@ Can you add another elemenet onto the page and change the value in that?
 
 ##JQuery
 
-JQuery is a powerful javaScript libary that we will be using as it has several functions built in to do DOM manipulation. 
+JQuery is a powerful javaScript libary that we will be using as it provides several functions to do DOM manipulation with.
+So rather than us having to write the JavaScript functions we can use a JQuery function.
+
 We can add JQuery to our application by including the following script tag into the index.html page.
 
 ```
@@ -151,7 +147,7 @@ We can add JQuery to our application by including the following script tag into 
 ```
 Now we can use JQuery to **manipulate the DOM** 
 
-Lets have a look at how we could do something similar to above using JQuery.
+Lets have a look at how we could do something similar to above, using JQuery.
 
 Lets add the following, can you tell what it will do before trying it out?
 
@@ -169,11 +165,7 @@ $('#learn-more').click( function() {
 
 ```
 
-Demonstrates jquery selectors, and binding functions in response to events. Worth mentioning that there are other ways to select elements.
-
-*  Start building the comments section. Explain that we'll be taking the form input (name & comment) & using jquery to add the
-   comment to the bottom of the page in a comments block
-
+Now lets use JQuery to begin building the chat functionality for our page.
 
     * Add an input and button to allow the user to submit comments:
 
