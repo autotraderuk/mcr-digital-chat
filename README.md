@@ -29,6 +29,8 @@ Open Intellij and then in the modal that pops up select **Check out from version
 
 Select the clone option. Follow the wizard to create the project.
 
+We want to **Create project from existing sources** follow the wizard through and then finish, that should open up the application.
+
 Now we can run and build the project from the command line.
 
 Navigate to this folder
@@ -75,35 +77,87 @@ And finally run it
  
  
 
-Session one
----
+#Session one
+
 
 This first session is aimed at getting you going, we will put a few elements on the page and have a look at the pages structure. 
 
-Learning Objectives:
-  * Understand how javascript interacts with the page, and introduce jquery
 
-Explain what javascript is & the sort of things we can do with it in webpages
-
-Show them the 'completed' example page and demonstrate the bits we've used jquery with (comments form & comments area).
-
-Explain that we'll be building something similar on their pages using jquery
-
-Tasks to talk them through:
+This page acts as the base of our application and is the page we hit when we naviagte to the root of the project : http://localhost:8082/
 
 
-   * Getting used to jquery. Add jquery cdn to page:
+
+The three main building blocks to a web page are [html](http://www.w3schools.com/html/),  [css](http://www.w3schools.com/css/) and [JavaScript](http://www.w3schools.com/js/). We'll start by looking at these. 
+
+Let's add a button that changes the title to say hello to you.
+
+```html
+<button id="learn-more" class="btn btn-success btn-lg" type="button">Learn More</button>
+```
+
+And an input box for you to put your name in
+
+
+```html
+<input id="hello-me" class="btn btn-success btn-lg" type="button">Me</button>
+```
+Now we need a JavaScript function that will take the value you enter and manipulate the DOM putting your name in the title.
+
+```html
+<script>
+
+  function myFunction() {
+        var person = prompt("Please enter your name", "Batman");
+        if (person != null) {
+            document.getElementById("my-name").innerHTML = person;
+        }
+ }
+
+</script>
+
+```
+
+Look at this function and make sure you get what it is doing. 
+
+Now lets add in some css. Pick a colour from the [colour picker](http://www.w3schools.com/html/) can you modify the above function to change the colour of your name to an inputted colour? 
+Hint: The code is below if you're struggling.
+
+
+
+```html
+<script>
+
+  function myFunction() {
+        var colour = prompt("Please enter your favourite colour", "Pink");
+        if (colour != null) {
+            document.getElementById("my-name").style.color = colour;
+        }
+ }
+
+</script>
+
+```
+
+Can you add another elemenet onto the page and change the value in that?
+
+
+##JQuery
+
+JQuery is a powerful javaScript libary that we will be using as it has several functions built in to do DOM manipulation. 
+We can add JQuery to our application by including the following script tag into the index.html page.
 
 ```
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 ```
+Now we can use JQuery to **manipulate the DOM** 
 
-* Add a simple button to the page somewhere and bind an onclick handler to the button to show an alert box:
+Lets have a look at how we could do something similar to above using JQuery.
+
+Lets add the following, can you tell what it will do before trying it out?
 
 ```html
 <button id="learn-more" class="btn btn-success btn-lg" type="button">Learn More</button>
 
-...
 
 <script>
 
