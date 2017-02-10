@@ -7,13 +7,15 @@ TODO - Finalise setup instruction:
 
 # Setup
 
+Before we can do any coding we need to get the base code and get the application up and running.
 First off you will need to create a github account if you don't already have one.
 
 https://github.com/
  
 Next you will need to Fork this repository. 
-First go to the top right of this page and hit the Fork button, this should create a copy of this code in your own repository.
+Go to the top right of this page and hit the Fork button, this should create a copy of this code in your own repository.
 Next click on the clone/download button and copy the url.
+There are two ways to complete the cloning of the repository, using the command line or the IDE.
 
 ## Using the url with the IDE:
 
@@ -41,7 +43,7 @@ And finally run it
 
     npm start
  
- Follow this link : http://localhost:8082
+ Follow this link : http://localhost:8082 you should see that old classic Hello World!
  
 
 
@@ -64,7 +66,7 @@ And finally run it
 
     npm start
  
- Follow this link : http://localhost:8082
+ Follow this link : http://localhost:8082 you should see that old classic Hello World!
  
  For the rest of what follows we will be editing the code within the IDE (integrated developemnt environment) Intellij.
  Open Intellij and then select open on the right hand side, this should open up the project.
@@ -73,8 +75,10 @@ And finally run it
  
  
 
-Javascripty section
+Session one
 ---
+
+This first session is aimed at getting you going, we will put a few elements on the page and have a look at the pages structure. 
 
 Learning Objectives:
   * Understand how javascript interacts with the page, and introduce jquery
