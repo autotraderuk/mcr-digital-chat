@@ -22,11 +22,14 @@ We can download the code directly into Intellij now.
 
 Open Intellij and then in the modal that pops up select **Check out from version control** and then **GitHub**
 
-    git clone https://github.com/Polly-Caldwell/chat.git
- 
- This should've created a folder called chat. 
- 
- Now navigate to this folder
+
+![alt tag](https://github.atcloud.io/storage/user/28/files/ebe48860-ef9b-11e6-9ebd-12010cfe628b)
+
+Select the clone option. Follow the wizard to create the project.
+
+Now we can run and build the project from the command line.
+
+Navigate to this folder
  
     cd chat/
 
@@ -40,10 +43,6 @@ And finally run it
  
  Follow this link : http://localhost:8082
  
- For the rest of what follows we will be editing the code within the IDE (integrated developemnt environment) Intellij.
- Open Intellij and then select open on the right hand side, this should open up the project.
- 
- We will now open this using the IDE (integrated developemnt environment) Intellij. 
 
 
 ## Using the url with the command line:
