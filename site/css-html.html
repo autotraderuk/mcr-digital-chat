@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Basics</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+
+    <h1>CSS Basics</h1>
+
+    <h3>Box Model</h3>
+
+    <hr/>
+
+    <div class="row">
+
+        <div class="col-md-8">
+            <p>
+                All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about
+                design and layout.
+            </p>
+
+            <p>
+                The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins,
+                borders, padding, and the actual content.
+            </p>
+
+            <p>
+                The image below illustrates the box model:
+            </p>
+
+            <img src="box-model.gif" alt="box-model.gif" class="img-responsive"/>
+
+            <p>
+                Explanation of the different parts:
+            </p>
+
+            <ul>
+                <li><strong>Content</strong> - The content of the box, where text and images appear</li>
+                <li><strong>Padding</strong> - Clears an area around the content. The padding is transparent</li>
+                <li><strong>Border</strong> - A border that goes around the padding and content</li>
+                <li><strong>Margin</strong> - Clears an area outside the border. The margin is transparent</li>
+            </ul>
+
+            <p>
+                The box model allows us to add a border around elements, and to define space between elements.
+            </p>
+        </div>
+
+    </div>
+
+    <hr/>
+
+    <h3>Fonts</h3>
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-8">
+
+            <p class="font-family-sans">Font Family Sans-Serif</p>
+
+            <p class="font-family-serif">Font Family Serif</p>
+
+            <p class="font-weight">Font Weight</p>
+
+            <p class="font-size">Font Size</p>
+
+            <p class="font-color">Font Color</p>
+
+            <p class="font-varient">Font Varient</p>
+
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+                    <pre class="prettyprint">
+    //html
+    &lt;p class="font-family-sans&quot;&gt;Font Family Sans-Serif&lt;/p&gt;
+    &lt;p class="font-family-serif&quot;&gt;Font Family Serif&lt;/p&gt;
+    &lt;p class="font-weight&quot;&gt;Font Weight&lt;/p&gt;
+    &lt;p class="font-size&quot;&gt;Font Size&lt;/p&gt;
+    &lt;p class="font-color&quot;&gt;Font Color&lt;/p&gt;
+    &lt;p class="font-varient&quot;&gt;Font Varient&lt;/p&gt;
+
+
+    //css
+    .font-family-sans{
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .font-family-serif{
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    .font-weight{
+        font-weight: bold;
+    }
+
+    .font-size{
+        font-size: 30px;
+    }
+
+    .font-color{
+        color: red;
+    }
+
+    .font-varient{
+        font-variant: small-caps;
+    }
+                    </pre>
+        </div>
+    </div>
+
+    <h3>Background Color</h3>
+
+    <hr/>
+
+    <div class="row">
+
+        <div class="col-md-8">
+
+            <div class="block block-1">
+
+            </div>
+
+            <div class="block block-2">
+
+            </div>
+
+            <div class="block block-3">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+                    <pre class="prettyprint">
+    //html
+    &lt;div class=&quot;block block-1&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;block block-2&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;block block-3&quot;&gt;
+    &lt;/div&gt;
+
+
+    //css
+    .block{
+        height: 200px;
+        margin: 0 0 20px 0;
+        width: 200px;
+    }
+
+    .block-1{
+        background-color: red;
+    }
+
+    .block-2{
+        background-color: #00FF00;
+    }
+
+    .block-3{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a7ed2f+0,f93618+100 */
+        background: #a7ed2f; /* Old browsers */
+        background: -moz-linear-gradient(top,  #a7ed2f 0%, #f93618 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #a7ed2f 0%,#f93618 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #a7ed2f 0%,#f93618 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7ed2f', endColorstr='#f93618',GradientType=0 ); /* IE6-9 */
+    }
+                    </pre>
+        </div>
+    </div>
+
+    <h3>Borders</h3>
+
+    <hr/>
+
+    <div class="row">
+
+        <div class="col-sm-8">
+
+            <div class="block block-4">
+
+            </div>
+
+            <div class="block block-5">
+
+            </div>
+
+            <div class="block block-6">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+                    <pre class="prettyprint">
+    //html
+    &lt;div class=&quot;block block-4&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;block block-5&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;block block-6&quot;&gt;
+    &lt;/div&gt;
+
+
+    //css
+    .block-4{
+        border: 5px solid red;
+    }
+
+    .block-5{
+        border-top: 1px solid green;
+        border-right: 3px solid blue;
+        border-bottom: 5px solid red;
+        border-left: 10px solid yellow;
+    }
+
+    .block-6{
+        border-width: 5px;
+        border-style: dashed;
+        border-color: red;
+    }
+                    </pre>
+        </div>
+    </div>
+
+    <h3>Margins and Padding</h3>
+
+    <hr/>
+
+    <div class="row">
+
+        <div class="col-sm-8">
+
+            <div class="block block-7">
+                <div class="block-7-inner"></div>
+            </div>
+
+            <div class="block block-8">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+                    <pre class="prettyprint">
+    //html
+    &lt;div class=&quot;block block-7&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;block block-8&quot;&gt;
+    &lt;/div&gt;
+
+
+    //css
+    .block-7,
+    .block-8{
+        background: red;
+    }
+
+    .block-7{
+        padding: 50px;
+    }
+
+    .block-7-inner{
+        background: yellow;
+        height: 50px;
+        width: 50px;
+    }
+
+    .block-8{
+        margin: 100px;
+    }
+                    </pre>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container">
+
+    <h1>Added Extras</h1>
+    <h3>Six Columns</h3>
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-2">
+            Column 1
+        </div>
+        <div class="col-md-2">
+            Column 2
+        </div>
+        <div class="col-md-2">
+            Column 3
+        </div>
+        <div class="col-md-2">
+            Column 4
+        </div>
+        <div class="col-md-2">
+            Column 5
+        </div>
+        <div class="col-md-2">
+            Column 6
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+          <pre class="prettyprint">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-2&quot;&gt;
+      Column 1
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-2&quot;&gt;
+      Column 2
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-2&quot;&gt;
+      Column 3
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-2&quot;&gt;
+      Column 4
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-2&quot;&gt;
+      Column 5
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-2&quot;&gt;
+      Column 6
+  &lt;/div&gt;
+&lt;/div&gt;
+          </pre>
+        </div>
+    </div>
+
+    <h3>Three Different Sized Columns</h3>
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-3">
+            This column is the smallest. This column is the smallest. This column is the smallest.
+        </div>
+        <div class="col-md-4">
+            This column is in the middle. This column is in the middle. This column is in the middle.
+        </div>
+        <div class="col-md-5">
+            This column is the largest. This column is the largest. This column is the largest.
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+          <pre class="prettyprint">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-3&quot;&gt;
+    This column is the smallest. This column is the smallest. This column is the smallest.
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;
+    This column is in the middle. This column is in the middle. This column is in the middle.
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-5&quot;&gt;
+    This column is the largest. This column is the largest. This column is the largest.
+  &lt;/div&gt;
+&lt;/div&gt;
+          </pre>
+        </div>
+    </div>
+
+    <h3>A Grid of Images</h3>
+
+    <hr/>
+    <div class="row">
+        <div class="col-md-3">
+            <img class="img-responsive" src="http://i.imgur.com/B5f6hOa.png"/>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="http://i.imgur.com/ltLwtDj.png"/>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="http://i.imgur.com/hvz0IHp.png"/>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="http://i.imgur.com/CldFzx6.png"/>
+        </div>
+    </div>
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+          <pre class="prettyprint">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-3&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;http://i.imgur.com/B5f6hOa.png&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-3&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;http://i.imgur.com/ltLwtDj.png&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-3&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;http://i.imgur.com/hvz0IHp.png&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-3&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;http://i.imgur.com/CldFzx6.png&quot;/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </pre>
+        </div>
+    </div>
+
+    <h3>A Link to Another Site</h3>
+
+    <hr/>
+    <p>Here is a <a href="https://google.com">link</a> to Google.com</p>
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+          <pre class="prettyprint">
+&lt;p&gt;Here is a &lt;a href=&quot;https://google.com&quot;&gt;link&lt;/a&gt; to Google.com&lt;/p&gt;
+          </pre>
+        </div>
+    </div>
+
+    <h3>A Bullet Point List</h3>
+
+    <hr/>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+          <pre class="prettyprint">
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+  &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ul&gt;
+          </pre>
+        </div>
+    </div>
+
+    <h3>Different Types of Text</h3>
+
+    <hr/>
+    <p>Some <b>bold</b> text. Some <i>italic</i> text. Some <u>underlined</u> text. Some <strike>crossed out</strike>
+        text.</p>
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+          <pre class="prettyprint">
+&lt;p&gt;Some &lt;b&gt;bold&lt;/b&gt; text. Some &lt;i&gt;italic&lt;/i&gt; text. Some &lt;u&gt;underlined&lt;/u&gt; text. Some &lt;strike&gt;crossed out&lt;/strike&gt; text.&lt;/p&gt;
+          </pre>
+        </div>
+    </div>
+
+    <h3>Nested Grids</h3>
+
+    <hr/>
+    <div class="row">
+        <div class="col-md-2">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="img-responsive" src="http://i.imgur.com/ltLwtDj.png"/>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="img-responsive" src="http://i.imgur.com/hvz0IHp.png"/>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-8">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-responsive" src="http://i.imgur.com/CldFzx6.png"/>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive" src="http://i.imgur.com/B5f6hOa.png"/>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="img-responsive" src="http://i.imgur.com/hvz0IHp.png"/>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="img-responsive" src="http://i.imgur.com/ltLwtDj.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-12">
+          <pre class="prettyprint">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-2&quot;&gt;
+
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-md-12&quot;&gt;
+        &lt;img class=&quot;img-responsive&quot; src=&quot;http://i.imgur.com/ltLwtDj.png&quot;/&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br/&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-md-12&quot;&gt;
+        &lt;img class=&quot;img-responsive&quot; src=&quot;http://i.imgur.com/hvz0IHp.png&quot;/&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-8&quot;&gt;
+
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;img class=&quot;img-responsive&quot; src=&quot;http://i.imgur.com/CldFzx6.png&quot;/&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;img class=&quot;img-responsive&quot; src=&quot;http://i.imgur.com/B5f6hOa.png&quot;/&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-2&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-md-12&quot;&gt;
+        &lt;img class=&quot;img-responsive&quot; src=&quot;http://i.imgur.com/hvz0IHp.png&quot;/&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br/&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-md-12&quot;&gt;
+        &lt;img class=&quot;img-responsive&quot; src=&quot;http://i.imgur.com/ltLwtDj.png&quot;/&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </pre>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
