@@ -205,7 +205,46 @@ Now lets use JQuery to begin building the chat functionality for our page.
 ```
 
 So this is quite a good start, but if you refresh the page you loose all the comments that have been entered.
-We need some way of storing all the comments that have been entered.
+We need some way of storing all the comments that have been entered. Thats where the Database will come in!
+
+
+#Session two
+
+Let's make our pages a bit more interesting. There are loads of different Iframes that we can add to the page to pull content down from other sites.
+This could be from :
+* youtube   
+   ```html
+   <iframe width="688" height="390"src="https://www.youtube.com/embed/g3FOQjCgl9w?controls=1"></iframe>
+   ```
+* sound cloud
+   ```html
+   <iframe width="100%" height="450" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/298167372"></iframe>
+   ```
+* instagram see [here](https://snapwidget.com/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Database javascrity section
 ---
