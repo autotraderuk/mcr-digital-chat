@@ -5,7 +5,7 @@ TODO - Finalise setup instruction:
 - Complete is: http://localhost:8081/complete.html
 - Index.html is currently empty but maybe could do with a header saying add your code here
 
-Setup
+# Setup
 
 First off you will need to create a github account if you don't already have one.
 
@@ -15,12 +15,12 @@ Next you will need to Fork this repository.
 First go to the top right of this page and hit the Fork button, this should create a copy of this code in your own repository.
 Next click on the clone/download button and copy the url.
 
-Using the url with the IDE:
--
+## Using the url with the IDE:
+
 For the rest of what follows we will be editing the code within the IDE (integrated developemnt environment) Intellij.
 We can download the code directly into Intellij now.
 
-Open Intellij and then in the modal that pops up select Check out from version control and then GitHub
+Open Intellij and then in the modal that pops up select **Check out from version control** and then **GitHub**
 
     git clone https://github.com/Polly-Caldwell/chat.git
  
@@ -46,8 +46,8 @@ And finally run it
  We will now open this using the IDE (integrated developemnt environment) Intellij. 
 
 
-Using the url with the command line:
--
+## Using the url with the command line:
+
 
     git clone https://github.com/Polly-Caldwell/chat.git
  
