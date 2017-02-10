@@ -5,6 +5,74 @@ TODO - Finalise setup instruction:
 - Complete is: http://localhost:8081/complete.html
 - Index.html is currently empty but maybe could do with a header saying add your code here
 
+Setup
+
+First off you will need to create a github account if you don't already have one.
+
+https://github.com/
+ 
+Next you will need to Fork this repository. 
+First go to the top right of this page and hit the Fork button, this should create a copy of this code in your own repository.
+Next click on the clone/download button and copy the url.
+
+Using the url with the IDE:
+-
+For the rest of what follows we will be editing the code within the IDE (integrated developemnt environment) Intellij.
+We can download the code directly into Intellij now.
+
+Open Intellij and then in the modal that pops up select Check out from version control and then GitHub
+
+    git clone https://github.com/Polly-Caldwell/chat.git
+ 
+ This should've created a folder called chat. 
+ 
+ Now navigate to this folder
+ 
+    cd chat/
+
+And build the application
+
+    npm install
+
+And finally run it
+
+    npm start
+ 
+ Follow this link : http://localhost:8082
+ 
+ For the rest of what follows we will be editing the code within the IDE (integrated developemnt environment) Intellij.
+ Open Intellij and then select open on the right hand side, this should open up the project.
+ 
+ We will now open this using the IDE (integrated developemnt environment) Intellij. 
+
+
+Using the url with the command line:
+-
+
+    git clone https://github.com/Polly-Caldwell/chat.git
+ 
+ This should've created a folder called chat. 
+ 
+ Now navigate to this folder
+ 
+    cd chat/
+
+And build the application
+
+    npm install
+
+And finally run it
+
+    npm start
+ 
+ Follow this link : http://localhost:8082
+ 
+ For the rest of what follows we will be editing the code within the IDE (integrated developemnt environment) Intellij.
+ Open Intellij and then select open on the right hand side, this should open up the project.
+ 
+ We will now open this using the IDE (integrated developemnt environment) Intellij. 
+ 
+ 
 
 Javascripty section
 ---
