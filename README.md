@@ -1,9 +1,3 @@
-TODO - Finalise setup instruction:
-1. Npm install in base dir
-2. The run 'npm start’
-- Simple chat (the one they will build) is: http://localhost:8081/simplechat.html 
-- Complete is: http://localhost:8081/complete.html
-- Index.html is currently empty but maybe could do with a header saying add your code here
 
 # Setup
 
@@ -28,6 +22,8 @@ Open Intellij and then in the modal that pops up select **Check out from version
 ![alt tag](https://github.atcloud.io/storage/user/28/files/ebe48860-ef9b-11e6-9ebd-12010cfe628b)
 
 Select the clone option. Follow the wizard to create the project.
+
+We want to **Create project from existing sources** follow the wizard through and then finish, that should open up the application.
 
 Now we can run and build the project from the command line.
 
@@ -75,35 +71,89 @@ And finally run it
  
  
 
-Session one
----
+#Session one
+
 
 This first session is aimed at getting you going, we will put a few elements on the page and have a look at the pages structure. 
 
-Learning Objectives:
-  * Understand how javascript interacts with the page, and introduce jquery
-
-Explain what javascript is & the sort of things we can do with it in webpages
-
-Show them the 'completed' example page and demonstrate the bits we've used jquery with (comments form & comments area).
-
-Explain that we'll be building something similar on their pages using jquery
-
-Tasks to talk them through:
 
 
-   * Getting used to jquery. Add jquery cdn to page:
+
+The three main building blocks to a web page are [html](http://www.w3schools.com/html/),  [css](http://www.w3schools.com/css/) and [JavaScript](http://www.w3schools.com/js/). We'll start by looking at these. 
+
+We will be coding within the index.html page in the application. This page acts as the base of our application and is the page we hit when we naviagte to the root of the project : http://localhost:8082/
+
+Let's add a button that changes the title to say hello to you!
+First the html button
+
+```html
+<button id="change-name" onclick="myFunction()">Try it</button>
+```
+
+And now a JavaScript function that triggers a prompt for you to enter your name into.
+
+```html
+<script>
+
+  function myFunction() {
+        var person = prompt("Please enter your name", "Batman");
+        if (person != null) {
+            document.getElementById("my-name").innerHTML = person;
+        }
+ }
+
+</script>
+
+```
+
+This JavaScript function manipulates the DOM putting your name into the title element.
+
+Look at this function and make sure you get what it is doing. 
+
+Now lets add in some css. Pick a colour from the [colour picker](http://www.w3schools.com/html/) can you modify the above function to change the colour of your name to an inputted colour? 
+
+Hint: The code is below if you're struggling.
+
+
+
+
+
+```html
+<script>
+
+  function myFunction() {
+        var colour = prompt("Please enter your favourite colour", "Pink");
+        if (colour != null) {
+            document.getElementById("my-name").style.color = colour;
+        }
+ }
+
+</script>
+
+```
+
+Can you add another elemenet onto the page and change the value in that?
+
+
+##JQuery
+
+JQuery is a powerful javaScript libary that we will be using as it provides several functions to do DOM manipulation with.
+So rather than us having to write the JavaScript functions we can use a JQuery function.
+
+We can add JQuery to our application by including the following script tag into the index.html page.
 
 ```
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 ```
+Now we can use JQuery to **manipulate the DOM** 
 
-* Add a simple button to the page somewhere and bind an onclick handler to the button to show an alert box:
+Lets have a look at how we could do something similar to above, using JQuery.
+
+Lets add the following, can you tell what it will do before trying it out?
 
 ```html
 <button id="learn-more" class="btn btn-success btn-lg" type="button">Learn More</button>
 
-...
 
 <script>
 
@@ -115,11 +165,7 @@ $('#learn-more').click( function() {
 
 ```
 
-Demonstrates jquery selectors, and binding functions in response to events. Worth mentioning that there are other ways to select elements.
-
-*  Start building the comments section. Explain that we'll be taking the form input (name & comment) & using jquery to add the
-   comment to the bottom of the page in a comments block
-
+Now lets use JQuery to begin building the chat functionality for our page.
 
     * Add an input and button to allow the user to submit comments:
 
@@ -159,7 +205,46 @@ Demonstrates jquery selectors, and binding functions in response to events. Wort
 ```
 
 So this is quite a good start, but if you refresh the page you loose all the comments that have been entered.
-We need some way of storing all the comments that have been entered.
+We need some way of storing all the comments that have been entered. Thats where the Database will come in!
+
+
+#Session two
+
+Let's make our pages a bit more interesting. There are loads of different Iframes that we can add to the page to pull content down from other sites.
+This could be from :
+* youtube   
+   ```html
+   <iframe width="688" height="390"src="https://www.youtube.com/embed/g3FOQjCgl9w?controls=1"></iframe>
+   ```
+* sound cloud
+   ```html
+   <iframe width="100%" height="450" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/298167372"></iframe>
+   ```
+* instagram see [here](https://snapwidget.com/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Database javascrity section
 ---
