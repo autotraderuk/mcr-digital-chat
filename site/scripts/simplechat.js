@@ -2,12 +2,13 @@ var friendlyChat;
 
 function Chat() {
     // Initialize Firebase
+
     var config = {
-        apiKey: "AIzaSyAmZDCY6OaDM749VGyCBZBIg6qVtnvMuOM",
-        authDomain: "mcrdigapprday.firebaseapp.com",
-        databaseURL: "https://mcrdigapprday.firebaseio.com",
-        storageBucket: "mcrdigapprday.appspot.com",
-        messagingSenderId: "252018298878"
+        apiKey: "AIzaSyBWcgwD75j0Qqvx_jOb51FVviK3iQOu4bg",
+        authDomain: "mcrdigitalexperienceday.firebaseapp.com",
+        databaseURL: "https://mcrdigitalexperienceday.firebaseio.com",
+        storageBucket: "mcrdigitalexperienceday.appspot.com",
+        messagingSenderId: "106124514758"
     };
     firebase.initializeApp(config);
 
