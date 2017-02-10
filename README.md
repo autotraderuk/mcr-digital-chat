@@ -167,12 +167,12 @@ $('#learn-more').click( function() {
 
 Now lets use JQuery to begin building the chat functionality for our page.
 
-    * Add an input and button to allow the user to submit comments:
+   * Add an input and button to allow the user to submit comments:
 
 ```html
 <div>
   <input type="textfield" id="simple-comment"></input>
-  <button id="simple-send">send simple comment</button>
+  <button id="simple-send">Post comment</button>
 </div>
 
 ```
@@ -194,7 +194,6 @@ Now lets use JQuery to begin building the chat functionality for our page.
    clear the input box for the next comment to be enetered
    
 ```html
-    //Add comments script
    <script>
      $("#simple-send").on("click", function(e) {
        $("#simple-comments ul").append("<li>" + $("#simple-comment").val() + "</li>");
@@ -206,6 +205,17 @@ Now lets use JQuery to begin building the chat functionality for our page.
 
 So this is quite a good start, but if you refresh the page you loose all the comments that have been entered.
 We need some way of storing all the comments that have been entered. Thats where the Database will come in!
+
+
+
+
+
+
+
+
+
+
+
 
 
 #Session two
@@ -227,43 +237,106 @@ This could be from :
 
 
 
-But what about the structure of the page. Navigate to /css-html.html to get some styling tips
+But what about the structure of the page, and how it looks? Navigate to /css-html.html to get some styling tips.
+
+Use the links to W3Schools above to make your page look a bit more interesting, there is loads of great content on the [bootstrap](http://getbootstrap.com/css/) site too.
+
+Most websites have a small image within the tab on the browser you can create your own [here](http://www.favicon.cc/)
+
+For the page you saw at the begining as well as a comments box there was also a box to put your display name in.
+
+```html
+</div>
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="name">Display Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <input type="text" id="comment" class="form-control" placeholder="comment goes here" >
+            </div>
+            <button id="addComment" class="btn btn-default">Post comment</button>
+        </div>
+```
+And then to display the comments
+```html
+   <div class="row">
+
+          <hr>
+        <div class="col-md-12">
+            <div class="col-md-8">
+                <h2>Comments</h2>
+                <div id="comments">
+                </div>
+            </div>
+        </div>
+
+          <div>
+              <ul id="messages">
+              </ul>
+          </div>
+
+      </div>
+ ```
+ 
+ And then the script
+ 
+ ```html
+ <script>
+            function addComment(name, comment){
+                var date = new Date();
+
+                var html = '<div class="comment row">' +
+                        '<div class="commentator col-xs-7"> ' + name + ' says: </div>' +
+                        '<div class="col-xs-12 commentText">' + comment + '</div>' +
+                        '<div class="col-xs-12 commentDate">' + date.toLocaleDateString() + '</div>' +
+                                '<hr class="col-xs-12" >'+
+                        '</div>';
+
+                $(html).hide().appendTo("#comments").fadeIn(400);
+                $("#name").val('');
+                $("#comment").val('');
+                name = '';
+                comment = '';
+            }
+
+            $("#addComment").click(function(){
+                var name = $("#name").val();
+                var comment = $("#comment").val();
+                addComment(name, comment);
+            });
+      </script>
+ ```
+ 
+ 
+ 
 
 
 
 
 
+#Session three
 
+Hopefully by now you have a site that looks great and is appealing to others. But what about all of your chat messages?
 
+We will now introduce a database so that all of the messages you generate won't be lost everytime you refresh the page.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Database javascrity section
----
-This section is an extension on the above and will introduce how databases play a large part in applications.  
-
-* Now lets add another input box and button that will allow us to create a more useful comments system. 
+Let's replace the comments boxes from above with the below
 
 ```html
 <div class="messaging">
-  <input type="textfield" id="message"></input>
-  <button id="send">send</button>
-</div>
+            <div class="form-group">
+                <label for="name">Display Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="message">Comment:</label>
+                <input type="text" id="message" class="form-control" placeholder="comment goes here" >
+            </div>
+            <button id="send" class="btn btn-default">Post comment</button>
+        </div>
+
 
 ```
 * Our new solution will also need a sign in and sign out button.
@@ -296,6 +369,7 @@ This section is an extension on the above and will introduce how databases play 
   var chat = new Chat();
  
   chat.setMessageInput($("#message"));
+  chat.setDisplayNameInput($("#name"));
   chat.setSubmitButton($("#send"));
   chat.setSignInButton($("#signin"));
   chat.setSignOutButton($("#signout"));
