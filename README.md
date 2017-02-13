@@ -259,7 +259,7 @@ Most websites have a small image within the tab on the browser you can create yo
 For the page you saw at the begining as well as a comments box there was also a box to put your display name in.
 
 ```html
-</div>
+
         <div class="form-inline">
             <div class="form-group">
                 <label for="name">Display Name:</label>
