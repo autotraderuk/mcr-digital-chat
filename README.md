@@ -41,6 +41,10 @@ And finally run it
  
  Follow this link : http://localhost:8081 you should see that old classic Hello World!
  
+ Now let's make a simple change and then commit to our repository.
+ 
+ Select the VCS tab within intellij, and then push.
+ 
 
 
 ## Using the url with the command line:
@@ -62,7 +66,11 @@ And finally run it
 
     npm start
  
- Follow this link : http://localhost:8082 you should see that old classic Hello World!
+ Follow this link : http://localhost:8081 you should see that old classic Hello World!
+ 
+ Now let's make a simple change and commit this to our repository.
+     git commit
+     git ghp-deploy
  
  For the rest of what follows we will be editing the code within the IDE (integrated developemnt environment) Intellij.
  Open Intellij and then select open on the right hand side, this should open up the project.
