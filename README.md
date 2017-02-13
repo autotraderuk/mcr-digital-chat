@@ -254,7 +254,10 @@ But what about the structure of the page, and how it looks? Navigate to /css-htm
 
 Use the links to W3Schools above to make your page look a bit more interesting, there is loads of great content on the [bootstrap](http://getbootstrap.com/css/) site too.
 
-Most websites have a small image within the tab on the browser you can create your own [here](http://www.favicon.cc/)
+Most websites have a small image within the tab on the browser. If you like you can create your own [here](http://www.favicon.cc/). This icon file then needs to be added into the project, at the root level. And also referenced within the head tag within the html file
+```html
+<link rel="shortcut icon" type="image/x-icon" href="/film-favicon.ico"/>
+```
 
 For the page you saw at the begining as well as a comments box there was also a box to put your display name in.
 
@@ -274,23 +277,23 @@ For the page you saw at the begining as well as a comments box there was also a 
 ```
 And then to display the comments
 ```html
-   <div class="row">
+<div class="row">
 
-          <hr>
-        <div class="col-md-12">
-            <div class="col-md-8">
-                <h2>Comments</h2>
-                <div id="comments">
-                </div>
+    <hr>
+    <div class="col-md-12">
+        <div class="col-md-8">
+            <h2>Comments</h2>
+            <div id="comments">
             </div>
         </div>
+    </div>
 
-          <div>
-              <ul id="messages">
-              </ul>
-          </div>
+    <div>
+        <ul id="messages">
+        </ul>
+    </div>
 
-      </div>
+</div>
  ```
  
  And then the script
@@ -390,7 +393,7 @@ Let's replace the comments boxes from above with the below
 </script>
 ```
 
-* Now lets attach some click handlers like before.  This will allow the javascript too react when a button is clicked and 
+* Now lets attach some click handlers like before.  This will allow the javascript to react when a button is clicked and 
 call the functionality that has been built for you already.
 
 ```html
@@ -404,7 +407,7 @@ call the functionality that has been built for you already.
 * Reload the page, click sign in and confirm that you are happy for your page to connect to your github account. Once done, try adding a message or two.  
 
 * Wait a minute the messages dont seem to be apearing on the page.  Oh, we almost forgot
-you need to add the follwoing script at the bottom of the page to ask the database to 'listen' for any messages
+you need to add the following script at the bottom of the page to ask the database to 'listen' for any messages
 
 ```html
 <script>
