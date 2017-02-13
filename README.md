@@ -274,23 +274,23 @@ For the page you saw at the begining as well as a comments box there was also a 
 ```
 And then to display the comments
 ```html
-   <div class="row">
+<div class="row">
 
-          <hr>
-        <div class="col-md-12">
-            <div class="col-md-8">
-                <h2>Comments</h2>
-                <div id="comments">
-                </div>
+    <hr>
+    <div class="col-md-12">
+        <div class="col-md-8">
+            <h2>Comments</h2>
+            <div id="comments">
             </div>
         </div>
+    </div>
 
-          <div>
-              <ul id="messages">
-              </ul>
-          </div>
+    <div>
+        <ul id="messages">
+        </ul>
+    </div>
 
-      </div>
+</div>
  ```
  
  And then the script
