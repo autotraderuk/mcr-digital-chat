@@ -21,6 +21,7 @@ Open Intellij and then in the modal that pops up select **Check out from version
 
 ![alt tag](https://github.atcloud.io/storage/user/28/files/ebe48860-ef9b-11e6-9ebd-12010cfe628b)
 
+
 Select the clone option. Follow the wizard to create the project.
 
 We want to **Create project from existing sources** follow the wizard through and then finish, that should open up the application.
@@ -44,6 +45,8 @@ And finally run it
  Now let's make a simple change and then commit to our repository.
  
  Select the VCS tab within intellij, and then push.
+ 
+ ![alt tag](https://github.atcloud.io/storage/user/28/files/c3a03736-f203-11e6-82dd-427fea3a50e6)
  
 
 
