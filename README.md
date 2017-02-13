@@ -21,6 +21,7 @@ Open Intellij and then in the modal that pops up select **Check out from version
 
 ![alt tag](https://github.atcloud.io/storage/user/28/files/ebe48860-ef9b-11e6-9ebd-12010cfe628b)
 
+
 Select the clone option. Follow the wizard to create the project.
 
 We want to **Create project from existing sources** follow the wizard through and then finish, that should open up the application.
@@ -39,7 +40,13 @@ And finally run it
 
     npm start
  
- Follow this link : http://localhost:8082 you should see that old classic Hello World!
+ Follow this link : http://localhost:8081 you should see that old classic Hello World!
+ 
+ Now let's make a simple change and then commit to our repository.
+ 
+ Select the VCS tab within intellij, and then push.
+ 
+ ![alt tag](https://github.atcloud.io/storage/user/28/files/c3a03736-f203-11e6-82dd-427fea3a50e6)
  
 
 
@@ -62,7 +69,11 @@ And finally run it
 
     npm start
  
- Follow this link : http://localhost:8082 you should see that old classic Hello World!
+ Follow this link : http://localhost:8081 you should see that old classic Hello World!
+ 
+ Now let's make a simple change and commit this to our repository.
+     git commit
+     git ghp-deploy
  
  For the rest of what follows we will be editing the code within the IDE (integrated developemnt environment) Intellij.
  Open Intellij and then select open on the right hand side, this should open up the project.
@@ -110,7 +121,7 @@ This JavaScript function manipulates the DOM putting your name into the title el
 
 Look at this function and make sure you get what it is doing. 
 
-Now lets add in some css. Pick a colour from the [colour picker](http://www.w3schools.com/html/) can you modify the above function to change the colour of your name to an inputted colour? 
+Now lets add in some css. Pick a colour from the [colour picker](http://www.w3schools.com/colors/colors_picker.asp) can you modify the above function to change the colour of your name to an inputted colour? 
 
 Hint: The code is below if you're struggling.
 
@@ -222,18 +233,20 @@ We need some way of storing all the comments that have been entered. Thats where
 
 Let's make our pages a bit more interesting. There are loads of different Iframes that we can add to the page to pull content down from other sites.
 This could be from :
+
+
  **youtube**
  
  ```html
  <iframe width="688" height="390"src="https://www.youtube.com/embed/g3FOQjCgl9w?controls=1"></iframe>
  ```
  
-** sound cloud**
+**sound cloud**
  ```html
  <iframe width="100%" height="450" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/298167372"></iframe>
  ```
  
-** instagram** see [here](https://snapwidget.com/)
+**instagram** see [here](https://snapwidget.com/)
 
 
 
@@ -246,7 +259,7 @@ Most websites have a small image within the tab on the browser you can create yo
 For the page you saw at the begining as well as a comments box there was also a box to put your display name in.
 
 ```html
-</div>
+
         <div class="form-inline">
             <div class="form-group">
                 <label for="name">Display Name:</label>
