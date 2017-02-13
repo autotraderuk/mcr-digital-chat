@@ -1,15 +1,15 @@
 var friendlyChat;
+var config = {
+    apiKey: "AIzaSyBWcgwD75j0Qqvx_jOb51FVviK3iQOu4bg",
+    authDomain: "mcrdigitalexperienceday.firebaseapp.com",
+    databaseURL: "https://mcrdigitalexperienceday.firebaseio.com",
+    storageBucket: "mcrdigitalexperienceday.appspot.com",
+    messagingSenderId: "106124514758"
+};
 
 function Chat() {
     // Initialize Firebase
 
-    var config = {
-        apiKey: "AIzaSyBWcgwD75j0Qqvx_jOb51FVviK3iQOu4bg",
-        authDomain: "mcrdigitalexperienceday.firebaseapp.com",
-        databaseURL: "https://mcrdigitalexperienceday.firebaseio.com",
-        storageBucket: "mcrdigitalexperienceday.appspot.com",
-        messagingSenderId: "106124514758"
-    };
     firebase.initializeApp(config);
 
     friendlyChat = new FriendlyChat();
