@@ -28,6 +28,7 @@ FriendlyChat.prototype.initChatWithDefaultBindings = function() {
   this.messageList = document.getElementById('messages');
   this.messageForm = document.getElementById('message-form');
   this.messageInput = document.getElementById('message');
+    this.displayNameInput = document.getElementById('name');
   this.submitButton = document.getElementById('submit');
   this.submitImageButton = document.getElementById('submitImage');
   this.imageForm = document.getElementById('image-form');
@@ -50,6 +51,8 @@ FriendlyChat.prototype.initChatWithDefaultBindings = function() {
   var buttonTogglingHandler = this.toggleButton.bind(this);
   this.messageInput.addEventListener('keyup', buttonTogglingHandler);
   this.messageInput.addEventListener('change', buttonTogglingHandler);
+    this.displayNameInput.addEventListener('keyup', buttonTogglingHandler);
+    this.displayNameInput.addEventListener('change', buttonTogglingHandler);
 
   // Events for image upload.
   this.submitImageButton.addEventListener('click', function() {
@@ -93,16 +96,17 @@ FriendlyChat.prototype.saveMessage = function(e) {
     e.preventDefault();
   }
   // Check that the user entered a message and is signed in.
-  if (this.messageInput.value && this.checkSignedInWithMessage()) {
+    if (this.messageInput.value && this.displayNameInput.value && this.checkSignedInWithMessage()) {
     var currentUser = this.auth.currentUser;
     // Add a new message entry to the Firebase Database.
     this.messagesRef.push({
-      name: currentUser.displayName,
+        name: this.displayNameInput.value,
       text: this.messageInput.value,
       photoUrl: currentUser.photoURL || '/images/profile_placeholder.png'
     }).then(function() {
       // Clear message text field and SEND button state.
       FriendlyChat.resetMaterialTextfield(this.messageInput);
+        FriendlyChat.resetMaterialTextfield(this.displayNameInput);
       this.toggleButton();
     }.bind(this)).catch(function(error) {
       console.error('Error writing new message to Firebase Database', error);

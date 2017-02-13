@@ -31,6 +31,10 @@ Chat.prototype.setMessageInput = function($element){
   friendlyChat.messageInput = $element.get(0);
 }
 
+Chat.prototype.setDisplayNameInput = function ($element) {
+    friendlyChat.displayNameInput = $element.get(0);
+}
+
 Chat.prototype.setSubmitButton = function($element){
   friendlyChat.submitButton = $element.get(0);
 }
