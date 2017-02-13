@@ -254,7 +254,10 @@ But what about the structure of the page, and how it looks? Navigate to /css-htm
 
 Use the links to W3Schools above to make your page look a bit more interesting, there is loads of great content on the [bootstrap](http://getbootstrap.com/css/) site too.
 
-Most websites have a small image within the tab on the browser you can create your own [here](http://www.favicon.cc/)
+Most websites have a small image within the tab on the browser. If you like you can create your own [here](http://www.favicon.cc/). This icon file then needs to be added into the project, at the root level. And also referenced within the head tag within the html file
+```html
+<link rel="shortcut icon" type="image/x-icon" href="/film-favicon.ico"/>
+```
 
 For the page you saw at the begining as well as a comments box there was also a box to put your display name in.
 
