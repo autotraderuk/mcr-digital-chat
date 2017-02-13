@@ -110,7 +110,7 @@ This JavaScript function manipulates the DOM putting your name into the title el
 
 Look at this function and make sure you get what it is doing. 
 
-Now lets add in some css. Pick a colour from the [colour picker](http://www.w3schools.com/html/) can you modify the above function to change the colour of your name to an inputted colour? 
+Now lets add in some css. Pick a colour from the [colour picker](http://www.w3schools.com/colors/colors_picker.asp) can you modify the above function to change the colour of your name to an inputted colour? 
 
 Hint: The code is below if you're struggling.
 
