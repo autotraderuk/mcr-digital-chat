@@ -214,6 +214,20 @@ Now lets use JQuery to begin building the chat functionality for our page.
    
 ```
 
+## Publishing your work to the public internet
+
+Github lets you publish webpages if you add them to a branch called `gh-pages`.  This can seem quite daunting to get right, but luckily there's a script in `package.json` written for us to make it easy.
+
+From the command line in the `mcr-digital-chat` simply enter:
+
+```node
+npm run ghp-deploy
+```
+
+Then you should be able to go to https://your-user-name.github.io/mcr-digital-chat/ and see your work.
+
+## Finally
+
 So this is quite a good start, but if you refresh the page you loose all the comments that have been entered.
 We need some way of storing all the comments that have been entered. Thats where the Database will come in!
 
