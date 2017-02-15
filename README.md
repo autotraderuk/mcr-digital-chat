@@ -218,7 +218,7 @@ Now lets use JQuery to begin building the chat functionality for our page.
 
 Github lets you publish webpages if you add them to a branch called `gh-pages`.  This can seem quite daunting to get right, but luckily there's a script in `package.json` written for us to make it easy.
 
-From the command line in the `mcr-digital-chat` simply enter:
+From the command line in the `mcr-digital-chat` dirctory, simply enter:
 
 ```node
 npm run ghp-deploy
