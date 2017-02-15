@@ -52,6 +52,7 @@ And finally run it
 
 ## Using the url with the command line:
 
+You only need to do this if you did not use the url within the IDE.
 
     git clone https://github.com/Polly-Caldwell/chat.git
  
@@ -92,9 +93,11 @@ This first session is aimed at getting you going, we will put a few elements on 
 
 The three main building blocks to a web page are [html](http://www.w3schools.com/html/),  [css](http://www.w3schools.com/css/) and [JavaScript](http://www.w3schools.com/js/). We'll start by looking at these. 
 
-We will be coding within the index.html page in the application. This page acts as the base of our application and is the page we hit when we naviagte to the root of the project : http://localhost:8082/
+We will be coding within the index.html page in the application. This page acts as the base of our application and is the page we hit when we naviagte to the root of the project : http://localhost:8081/
 
 Let's add a button that changes the title to say hello to you!
+
+
 First the html button
 
 ```html
@@ -264,14 +267,25 @@ This could be from :
 
 
 
+**Structure and styling**
 But what about the structure of the page, and how it looks? Navigate to /css-html.html to get some styling tips.
 
 Use the links to W3Schools above to make your page look a bit more interesting, there is loads of great content on the [bootstrap](http://getbootstrap.com/css/) site too.
 
-Most websites have a small image within the tab on the browser. If you like you can create your own [here](http://www.favicon.cc/). This icon file then needs to be added into the project, at the root level. And also referenced within the head tag within the html file
+**favicon**
+
+Most websites have a small image within the tab on the browser, this is called a favicon. 
+
+If you like you can create your own [here](http://www.favicon.cc/). 
+
+The file this generates then needs to be added into the project, at the root level, and also referenced within the head tag within the html file
+
+
 ```html
 <link rel="shortcut icon" type="image/x-icon" href="/film-favicon.ico"/>
 ```
+
+**Display name**
 
 For the page you saw at the begining as well as a comments box there was also a box to put your display name in.
 
