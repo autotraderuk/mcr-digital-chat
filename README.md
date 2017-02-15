@@ -46,7 +46,7 @@ And finally run it
  
  Select the VCS tab within intellij, and then push.
  
- ![alt tag](https://github.atcloud.io/storage/user/28/files/c3a03736-f203-11e6-82dd-427fea3a50e6)
+ ![alt tag](https://cloud.githubusercontent.com/assets/7566947/22972998/16c991fc-f374-11e6-8659-2e72de6a9f9a.png)
  
 
 
