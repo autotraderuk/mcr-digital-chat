@@ -19,7 +19,7 @@ We can download the code directly into Intellij now.
 Open Intellij and then in the modal that pops up select **Check out from version control** and then **GitHub**
 
 
-![alt tag](https://github.atcloud.io/storage/user/28/files/ebe48860-ef9b-11e6-9ebd-12010cfe628b)
+![alt tag](https://cloud.githubusercontent.com/assets/7566947/22973057/58db7074-f374-11e6-8e95-1b2fb876d10a.png)
 
 
 Select the clone option. Follow the wizard to create the project.
