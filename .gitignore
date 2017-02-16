@@ -1,4 +1,10 @@
+# This file lets us tell Git to ignore certain files
+# We want to ignore anything that is built from our code
+
+# These are files used by IntelliJ
 .idea
 *.iml
 *.ipr
+
+# This directory is where NPM stores the files it downloads
 node_modules

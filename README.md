@@ -269,7 +269,7 @@ This could be from :
 
 **Structure and styling**
 
-But what about the structure of the page, and how it looks? Navigate to /css-html.html to get some styling tips.
+But what about the structure of the page, and how it looks? Navigate to /documentation/css-html.html to get some styling tips.
 
 Use the links to W3Schools above to make your page look a bit more interesting, there is loads of great content on the [bootstrap](http://getbootstrap.com/css/) site too.
 
