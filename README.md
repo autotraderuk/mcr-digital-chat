@@ -30,7 +30,7 @@ Now we can run and build the project from the command line.
 
 Navigate to this folder
  
-    cd chat/
+    cd mcr-digital-chat/
 
 And build the application
 
@@ -54,13 +54,13 @@ And finally run it
 
 You only need to do this if you did not use the url within the IDE.
 
-    git clone https://github.com/Polly-Caldwell/chat.git
+    git clone https://github.com/autotraderuk/mcr-digital-chat.git
  
- This should've created a folder called chat. 
+ This should've created a folder called mcr-digital-chat. 
  
  Now navigate to this folder
  
-    cd chat/
+    cd mcr-digital-chat/
 
 And build the application
 
