@@ -273,6 +273,12 @@ But what about the structure of the page, and how it looks? Navigate to **/docum
 
 Use the links to W3Schools above to make your page look a bit more interesting, there is loads of great content on the [bootstrap](http://getbootstrap.com/css/) site too.
 
+This can be included in the page by including the following script tag
+
+````html
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+```
+
 **favicon**
 
 Most websites have a small image within the tab on the browser, this is called a favicon. 
