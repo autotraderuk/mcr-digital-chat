@@ -444,3 +444,12 @@ you need to add the following script at the bottom of the page to ask the databa
 ```
 
 * So we can now see that the messages were being saved just not displayed
+
+#What you could do next 
+If you have motored through this exercise relatively easily and wondered what else to do then you could consider
+
+* How can we further improve the look and feel of the webpage? - we can improve this by adding some css using the open-source framework [bootstrap](http://getbootstrap.com/css/)
+
+* Do you want no-one to see your comments? Create your own [firebase account](https://console.firebase.google.com) and then link it to your own github account.
+
+* Your code is available in your repo, take it home, play around with it  and improve the webpage further.
