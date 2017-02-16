@@ -16,7 +16,7 @@ There are two ways to complete the cloning of the repository, using the command 
 For the rest of what follows we will be editing the code within the IDE (integrated developemnt environment) Intellij.
 We can download the code directly into Intellij now.
 
-Open Intellij and then in the modal that pops up select **Check out from version control** and then **GitHub**
+Open Intellij and then in the modal that pops up select **Check out from version control** and then **Git**
 
 
 ![alt tag](https://cloud.githubusercontent.com/assets/7566947/22973057/58db7074-f374-11e6-8e95-1b2fb876d10a.png)
